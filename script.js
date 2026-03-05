@@ -7,7 +7,7 @@ const productsPerPage = 12;
 
 const products = [
 
-{ id:"1", name:"Black Knit Running Shoes", price:1200, deposit:2000, category:"Footwear", size:"9", image:"./images/black-knit-running-shoes.jpg" },
+{ id:"1", name:"black knit running shoes", price:1200, deposit:2000, category:"Footwear", size:"9", image:"./images/black-knit-running-shoes.jpg" },
 { id:"2", name:"Philips Turbo Dry Hair Dryer", price:500, deposit:1000, category:"Accessories", size:"Standard", image:"./images/philips-turbo-dry-hair-dryer.jpg" },
 { id:"3", name:"Beige Chunky Sneakers", price:1500, deposit:2500, category:"Footwear", size:"6", image:"./images/beige-chunky-sneakers.jpg" },
 { id:"4", name:"Philips Dry Iron", price:400, deposit:800, category:"Accessories", size:"Standard", image:"./images/philips-dry-iron.jpg" },
