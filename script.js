@@ -95,10 +95,8 @@ grid.innerHTML+=`
 
 <h4>${product.name}</h4>
 
-<p>₹${product.price} / day</p>
-
+<p>₹${product.price}/day</p>
 <p>Deposit ₹${product.deposit}</p>
-
 <p>Size ${product.size}</p>
 
 </div>
@@ -115,8 +113,6 @@ renderPagination(list.length);
 
 
 
-/* PAGINATION */
-
 function renderPagination(total){
 
 const pages=Math.ceil(total/productsPerPage);
@@ -128,11 +124,13 @@ pagination.innerHTML="";
 
 for(let i=1;i<=pages;i++){
 
-pagination.innerHTML+=`<button class="page-btn" onclick="changePage(${i})">${i}</button>`;
+pagination.innerHTML+=`<button onclick="changePage(${i})">${i}</button>`;
 
 }
 
 }
+
+
 
 function changePage(page){
 
@@ -143,26 +141,30 @@ applyFilters();
 
 
 
-/* FILTERS */
-
 function applyFilters(){
 
-const search=document.getElementById("search")?.value.toLowerCase() || "";
-const category=document.getElementById("categoryFilter")?.value || "all";
-const size=document.getElementById("sizeFilter")?.value || "all";
+const search=document.getElementById("search")?.value.toLowerCase()||"";
+const category=document.getElementById("categoryFilter")?.value||"all";
+const size=document.getElementById("sizeFilter")?.value||"all";
 
 let filtered=products;
 
 if(search){
+
 filtered=filtered.filter(p=>p.name.toLowerCase().includes(search));
+
 }
 
-if(category!=="all"){
+if(category!="all"){
+
 filtered=filtered.filter(p=>p.category===category);
+
 }
 
-if(size!=="all"){
+if(size!="all"){
+
 filtered=filtered.filter(p=>p.size===size);
+
 }
 
 displayProducts(filtered);
@@ -170,8 +172,6 @@ displayProducts(filtered);
 }
 
 
-
-/* OPEN PRODUCT */
 
 function openProduct(id){
 
@@ -182,17 +182,13 @@ window.location.href="product.html";
 
 
 
-/* LOAD PRODUCT PAGE */
-
 const selectedId=localStorage.getItem("selectedProduct");
 
-if(selectedId && document.getElementById("productImage")){
+if(selectedId && document.getElementById("mainImage")){
 
 const product=products.find(p=>p.id==selectedId);
 
-if(product){
-
-document.getElementById("productImage").src=product.image;
+document.getElementById("mainImage").src=product.image;
 document.getElementById("productName").innerText=product.name;
 document.getElementById("productPrice").innerText="₹"+product.price+"/day";
 document.getElementById("productDeposit").innerText="Deposit ₹"+product.deposit;
@@ -200,44 +196,29 @@ document.getElementById("productSize").innerText="Size "+product.size;
 
 }
 
-}
 
 
-
-/* IMAGE ZOOM */
-
-function zoomImage(){
-
-const img=document.getElementById("productImage");
-
-if(img){
-window.open(img.src);
-}
-
-}
-
-
-
-/* RENT REQUEST */
-
-function confirmRental(){
+function orderNow(){
 
 const product=document.getElementById("productName").innerText;
-const start=document.getElementById("startDate").value;
-const end=document.getElementById("endDate").value;
+const days=document.getElementById("rentalDays").value;
 
-if(confirm("Do you want to rent this product?")){
-
-const message=`Hi ClosetYield, I want to rent ${product} from ${start} to ${end}`;
+const message=`Hi ClosetYield, I want to rent ${product} for ${days} days`;
 
 window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`);
 
 }
 
+
+
+function openWhatsApp(){
+
+const message="Hi ClosetYield, I want to rent or list items";
+
+window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`);
+
 }
 
 
-
-/* INITIAL LOAD */
 
 displayProducts(products);

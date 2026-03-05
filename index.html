@@ -2,13 +2,14 @@
 <html>
 
 <head>
+
 <meta charset="UTF-8">
 <title>ClosetYield</title>
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-
 
 
 <header class="navbar">
@@ -17,40 +18,30 @@
 
 <nav>
 
-<a href="#">Men</a>
-<a href="#">Women</a>
+<a href="#">Clothing</a>
 <a href="#">Footwear</a>
 <a href="#">Accessories</a>
 
 </nav>
 
-<button class="rent-btn-nav" onclick="openWhatsApp()">
-Rent Now
-</button>
+<button class="chat-btn" onclick="openWhatsApp()">Chat With Us</button>
 
 </header>
 
 
-<!-- HERO SECTION -->
 
 <section class="hero">
 
-<h1>Luxury Fashion Rentals</h1>
-
-<p>Rent premium outfits, footwear and accessories for every occasion.</p>
-
-<button onclick="openWhatsApp()" class="hero-btn">
-Start Renting
-</button>
+<h1>ClosetYield</h1>
+<p>Let Your Wardrobe Earn For You</p>
 
 </section>
 
 
-<!-- FILTER BAR -->
 
 <div class="filter-bar">
 
-<input id="search" placeholder="Search items..." onkeyup="applyFilters()">
+<input id="search" placeholder="Search products..." onkeyup="applyFilters()">
 
 <select id="categoryFilter" onchange="applyFilters()">
 <option value="all">All Categories</option>
@@ -81,7 +72,6 @@ Start Renting
 </div>
 
 
-<!-- PRODUCTS -->
 
 <div class="products-container">
 
@@ -92,7 +82,6 @@ Start Renting
 </div>
 
 
-<!-- FOOTER -->
 
 <footer class="footer">
 
@@ -101,8 +90,7 @@ Start Renting
 <div>
 
 <h4>ClosetYield</h4>
-
-<p>Luxury fashion rental platform designed for modern wardrobes.</p>
+<p>Rent premium fashion and monetize your wardrobe.</p>
 
 </div>
 
@@ -110,13 +98,9 @@ Start Renting
 
 <h4>Company</h4>
 
-<ul>
-
-<li><a href="#">About Us</a></li>
-<li><a href="#">Careers</a></li>
-<li><a href="#">Press</a></li>
-
-</ul>
+<a href="#">About</a>
+<a href="#">Careers</a>
+<a href="#">Press</a>
 
 </div>
 
@@ -124,13 +108,9 @@ Start Renting
 
 <h4>Policies</h4>
 
-<ul>
-
-<li><a href="#">Rental Policy</a></li>
-<li><a href="#">Terms & Conditions</a></li>
-<li><a href="#">Privacy Policy</a></li>
-
-</ul>
+<a href="#">Rental Policy</a>
+<a href="#">Terms</a>
+<a href="#">Privacy</a>
 
 </div>
 
@@ -139,29 +119,21 @@ Start Renting
 <h4>Contact</h4>
 
 <p>Email: bhavesh.pawar25@iimb.ac.in</p>
-
 <p>WhatsApp: +91 93591 24428</p>
 
 </div>
 
 </div>
 
-<div class="copyright">
-
-© 2026 ClosetYield
-
-</div>
-
 </footer>
 
 
-<!-- FLOATING WHATSAPP BUTTON -->
 
-<button class="floating-whatsapp" onclick="openWhatsApp()">
+<div class="floating-whatsapp" onclick="openWhatsApp()">
 
-💬 Rent via WhatsApp
+💬
 
-</button>
+</div>
 
 
 <script src="script.js"></script>

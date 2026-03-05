@@ -4,39 +4,37 @@
 <head>
 
 <meta charset="UTF-8">
-
 <title>ClosetYield</title>
-
 <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<div class="navbar">
+
+<header class="navbar">
 
 <div class="logo">
-
 <a href="index.html">ClosetYield</a>
-
 </div>
 
-</div>
+</header>
+
 
 
 <div class="product-page">
 
+<div class="product-gallery">
 
-<div class="image-container">
+<img id="mainImage" class="main-image">
 
-<img id="productImage" class="product-image">
-
-<button class="zoom-btn" onclick="zoomImage()">Zoom</button>
+<div id="imageThumbnails" class="thumbnail-row"></div>
 
 </div>
 
 
-<div class="product-info-page">
+
+<div class="product-details">
 
 <h2 id="productName"></h2>
 
@@ -47,22 +45,30 @@
 <p id="productSize"></p>
 
 
-<label>Rental Start Date</label>
+<label>Number of Rental Days</label>
 
-<input type="date" id="startDate">
-
-
-<label>Return Date</label>
-
-<input type="date" id="endDate">
+<input type="number" id="rentalDays" value="1" min="1">
 
 
-<button class="rent-btn" onclick="confirmRental()">
+<button class="order-btn" onclick="orderNow()">
 
-Rent Product
+Order Now via WhatsApp
 
 </button>
 
+
+
+<h3>Rental Terms</h3>
+
+<div class="terms-box">
+
+<p>• Must be 18+</p>
+<p>• Deposit refunded after inspection</p>
+<p>• No self washing</p>
+<p>• Late returns ₹200/day</p>
+<p>• Damage may lead to deductions</p>
+
+</div>
 
 </div>
 
