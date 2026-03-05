@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>ClosetYield</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+<div class="logo">ClosetYield</div>
+
+<nav>
+
+<a href="#">Men</a>
+<a href="#">Women</a>
+<a href="#">Footwear</a>
+<a href="#">Accessories</a>
+
+</nav>
+
+<button class="rent-btn-nav" onclick="openWhatsApp()">
+Rent Now
+</button>
+
+</header>
+
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+<h1>Luxury Fashion Rentals</h1>
+
+<p>Rent premium outfits, footwear and accessories for every occasion.</p>
+
+<button onclick="openWhatsApp()" class="hero-btn">
+Start Renting
+</button>
+
+</section>
+
+
+<!-- FILTER BAR -->
+
+<div class="filter-bar">
+
+<input id="search" placeholder="Search items..." onkeyup="applyFilters()">
+
+<select id="categoryFilter" onchange="applyFilters()">
+<option value="all">All Categories</option>
+<option value="Clothing">Clothing</option>
+<option value="Footwear">Footwear</option>
+<option value="Accessories">Accessories</option>
+</select>
+
+<select id="sizeFilter" onchange="applyFilters()">
+
+<option value="all">All Sizes</option>
+
+<option value="S">S</option>
+<option value="M">M</option>
+<option value="L">L</option>
+
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+
+<option value="Free Size">Free Size</option>
+<option value="Standard">Standard</option>
+
+</select>
+
+</div>
+
+
+<!-- PRODUCTS -->
+
+<div class="products-container">
+
+<div id="productGrid" class="product-grid"></div>
+
+<div id="pagination" class="pagination"></div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<div class="footer-grid">
+
+<div>
+
+<h4>ClosetYield</h4>
+
+<p>Luxury fashion rental platform designed for modern wardrobes.</p>
+
+</div>
+
+<div>
+
+<h4>Company</h4>
+
+<ul>
+
+<li><a href="#">About Us</a></li>
+<li><a href="#">Careers</a></li>
+<li><a href="#">Press</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h4>Policies</h4>
+
+<ul>
+
+<li><a href="#">Rental Policy</a></li>
+<li><a href="#">Terms & Conditions</a></li>
+<li><a href="#">Privacy Policy</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h4>Contact</h4>
+
+<p>Email: bhavesh.pawar25@iimb.ac.in</p>
+
+<p>WhatsApp: +91 93591 24428</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 ClosetYield
+
+</div>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP BUTTON -->
+
+<button class="floating-whatsapp" onclick="openWhatsApp()">
+
+💬 Rent via WhatsApp
+
+</button>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

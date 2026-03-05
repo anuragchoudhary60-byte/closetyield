@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>ClosetYield</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+<div class="logo">
+
+<a href="index.html">ClosetYield</a>
+
+</div>
+
+</div>
+
+
+<div class="product-page">
+
+
+<div class="image-container">
+
+<img id="productImage" class="product-image">
+
+<button class="zoom-btn" onclick="zoomImage()">Zoom</button>
+
+</div>
+
+
+<div class="product-info-page">
+
+<h2 id="productName"></h2>
+
+<p id="productPrice"></p>
+
+<p id="productDeposit"></p>
+
+<p id="productSize"></p>
+
+
+<label>Rental Start Date</label>
+
+<input type="date" id="startDate">
+
+
+<label>Return Date</label>
+
+<input type="date" id="endDate">
+
+
+<button class="rent-btn" onclick="confirmRental()">
+
+Rent Product
+
+</button>
+
+
+</div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
