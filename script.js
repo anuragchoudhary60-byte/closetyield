@@ -1,6 +1,14 @@
 const whatsappNumber = "919359124428";
 
-/* PRODUCTS */
+/* =========================
+   CART
+========================= */
+
+let cart = [];
+
+/* =========================
+   PRODUCTS
+========================= */
 
 const products = [
 
@@ -9,6 +17,7 @@ const products = [
 { id:"3", name:"Beige Chunky Sneakers", price:1500, deposit:2500, category:"Footwear", size:"6", image:"./images/beige-chunky-sneakers.jpg" },
 { id:"4", name:"Philips Dry Iron", price:400, deposit:800, category:"Accessories", size:"Standard", image:"./images/philips-dry-iron.jpg" },
 { id:"5", name:"Navy Blue Gradient Running Shoes", price:1300, deposit:2200, category:"Footwear", size:"10", image:"./images/navy-blue-gradient-running-shoes.jpg" },
+
 { id:"6", name:"Tropical Floral Half Sleeve Shirt", price:900, deposit:1500, category:"Clothing", size:"L", image:"./images/tropical-floral-half-sleeve-shirt.jpg" },
 { id:"7", name:"Navy Tropical Floral Shirt", price:950, deposit:1600, category:"Clothing", size:"L", image:"./images/navy-tropical-floral-shirt.jpg" },
 { id:"8", name:"Abstract Leaf Print Half Sleeve Shirt", price:850, deposit:1400, category:"Clothing", size:"M", image:"./images/abstract-leaf-print-half-sleeve-shirt.jpg" },
@@ -30,6 +39,7 @@ const products = [
 { id:"22", name:"Mint Blossom Embroidered Cape Lehenga Set", price:2000, deposit:2000, category:"Clothing", size:"S", image:"./images/Mint Blossom Embroidered Cape Lehenga Set.jpg" },
 { id:"23", name:"Sage Green Floral Dress", price:1000, deposit:1000, category:"Clothing", size:"M", image:"./images/Sage-green-floral-dress.jpg" },
 { id:"24", name:"Navy Blue & Golden Lehenga", price:3000, deposit:3000, category:"Clothing", size:"L", image:"./images/Navy-Blue-&-Golden-Lehenga.jpg" },
+
 { id:"25", name:"Denim Mini Dress", price:1000, deposit:1000, category:"Clothing", size:"S", image:"./images/Denim-Mini-Dress.jpg" },
 { id:"26", name:"Off-white and Gold Anarkali Dress", price:1000, deposit:1000, category:"Clothing", size:"S", image:"./images/Off-white-and-gold-Anarkali-Dress.jpg" },
 { id:"27", name:"Red Embroidered Lehenga", price:3000, deposit:3000, category:"Clothing", size:"S", image:"./images/Red-embroidered-Lehenga.jpg" },
@@ -65,11 +75,13 @@ const products = [
 
 ];
 
-/* DISPLAY PRODUCTS */
+/* =========================
+   DISPLAY PRODUCTS
+========================= */
 
 function displayProducts(list){
 
-const grid=document.getElementById("productGrid");
+const grid = document.getElementById("productGrid");
 
 if(!grid) return;
 
@@ -77,7 +89,7 @@ grid.innerHTML="";
 
 list.forEach(product=>{
 
-grid.innerHTML+=`
+grid.innerHTML += `
 
 <div class="product-card" onclick="openProduct('${product.id}')">
 
@@ -91,6 +103,10 @@ grid.innerHTML+=`
 
 <p>Size ${product.size}</p>
 
+<button onclick="event.stopPropagation(); addToCart('${product.id}')">
+Add to Cart
+</button>
+
 </div>
 
 `;
@@ -99,22 +115,108 @@ grid.innerHTML+=`
 
 }
 
+/* =========================
+   ADD TO CART
+========================= */
 
-/* OPEN PRODUCT */
+function addToCart(id){
 
-function openProduct(id){
+const product = products.find(p => p.id === id);
 
-localStorage.setItem("selectedProduct",id);
+cart.push(product);
 
-window.location.href="product.html";
+alert(product.name + " added to cart");
 
 }
 
+/* =========================
+   PRODUCT PAGE
+========================= */
 
-/* INITIAL LOAD */
+function openProduct(id){
 
-document.addEventListener("DOMContentLoaded",function(){
+localStorage.setItem("selectedProduct", id);
+
+window.location.href = "product.html";
+
+}
+
+function loadProduct(){
+
+const id = localStorage.getItem("selectedProduct");
+
+if(!id) return;
+
+const product = products.find(p => p.id === id);
+
+if(!product) return;
+
+document.getElementById("productImage").src = product.image;
+document.getElementById("productName").innerText = product.name;
+document.getElementById("productPrice").innerText = "₹"+product.price+"/day";
+document.getElementById("productDeposit").innerText = "Deposit ₹"+product.deposit;
+document.getElementById("productSize").innerText = "Size "+product.size;
+
+}
+
+/* =========================
+   WHATSAPP
+========================= */
+
+function openWhatsApp(){
+
+window.open(`https://wa.me/${whatsappNumber}`, "_blank");
+
+}
+
+function confirmRental(){
+
+const product = document.getElementById("productName").innerText;
+
+const start = document.getElementById("startDate").value;
+const end = document.getElementById("endDate").value;
+
+const message = `Hi ClosetYield, I want to rent ${product} from ${start} to ${end}`;
+
+window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`);
+
+}
+
+/* =========================
+   FILTERS
+========================= */
+
+function applyFilters(){
+
+const search = document.getElementById("search")?.value.toLowerCase() || "";
+const category = document.getElementById("categoryFilter")?.value || "all";
+const size = document.getElementById("sizeFilter")?.value || "all";
+
+let filtered = products;
+
+if(search){
+filtered = filtered.filter(p => p.name.toLowerCase().includes(search));
+}
+
+if(category !== "all"){
+filtered = filtered.filter(p => p.category === category);
+}
+
+if(size !== "all"){
+filtered = filtered.filter(p => p.size === size);
+}
+
+displayProducts(filtered);
+
+}
+
+/* =========================
+   INITIAL LOAD
+========================= */
+
+document.addEventListener("DOMContentLoaded", function(){
 
 displayProducts(products);
+loadProduct();
 
 });
