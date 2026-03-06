@@ -4,8 +4,7 @@
 <head>
 
 <meta charset="UTF-8">
-
-<title>ClosetYield</title>
+<title>Product</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -13,30 +12,11 @@
 
 <body>
 
-<div class="navbar">
-
-<div class="logo">
-
-<a href="index.html">ClosetYield</a>
-
-</div>
-
-</div>
-
-
 <div class="product-page">
 
+<img id="productImage">
 
-<div class="image-container">
-
-<img id="productImage" class="product-image">
-
-<button class="zoom-btn" onclick="zoomImage()">Zoom</button>
-
-</div>
-
-
-<div class="product-info-page">
+<div class="product-details">
 
 <h2 id="productName"></h2>
 
@@ -48,29 +28,38 @@
 
 
 <label>Rental Start Date</label>
-
 <input type="date" id="startDate">
 
-
 <label>Return Date</label>
-
 <input type="date" id="endDate">
 
 
-<button class="rent-btn" onclick="confirmRental()">
+<button onclick="confirmRental()" class="order-btn">
 
-Rent Product
+Order via WhatsApp
 
 </button>
 
 
-</div>
+<h3>Terms & Conditions</h3>
+
+<ul>
+
+<li>Deposit refunded after inspection</li>
+
+<li>Late returns incur extra charge</li>
+
+<li>Damaged items incur repair cost</li>
+
+<li>Items must be returned in original condition</li>
+
+</ul>
 
 </div>
 
+</div>
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
