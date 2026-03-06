@@ -13,9 +13,9 @@ let cart = [];
 const products = [
 
 { id:"1", name:"Black Knit Running Shoes", price:120, deposit:200, category:"Footwear", size:"9", image:"./Images/black-knit-running-shoes.jpg" },
-//{ id:"2", name:"Philips Turbo Dry Hair Dryer", price:50, deposit:100, category:"Accessories", size:"Standard", image:"./Images/philips-turbo-dry-hair-dryer.jpg" },
+{ id:"2", name:"Philips Turbo Dry Hair Dryer", price:50, deposit:100, category:"Accessories", size:"Standard", image:"./Images/philips-turbo-dry-hair-dryer.jpg" },
 { id:"3", name:"Beige Chunky Sneakers", price:150, deposit:250, category:"Footwear", size:"6", image:"./Images/beige-chunky-sneakers.jpg" },
-//{ id:"4", name:"Philips Dry Iron", price:40, deposit:80, category:"Accessories", size:"Standard", image:"./Images/philips-dry-iron.jpg" },
+{ id:"4", name:"Philips Dry Iron", price:40, deposit:80, category:"Accessories", size:"Standard", image:"./Images/philips-dry-iron.jpg" },
 { id:"5", name:"Navy Blue Gradient Running Shoes", price:130, deposit:220, category:"Footwear", size:"10", image:"./Images/navy-blue-gradient-running-shoes.jpg" },
 
 { id:"6", name:"Tropical Floral Half Sleeve Shirt", price:90, deposit:150, category:"Clothing", size:"L", image:"./Images/tropical-floral-half-sleeve-shirt.jpg" },
