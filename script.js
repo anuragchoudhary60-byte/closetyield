@@ -76,7 +76,7 @@ const products = [
 ];
 
 /* =========================
-   DISPLAY PRODUCTS
+DISPLAY PRODUCTS
 ========================= */
 
 function displayProducts(list){
@@ -116,7 +116,7 @@ Add to Cart
 }
 
 /* =========================
-   ADD TO CART
+ADD TO CART
 ========================= */
 
 function addToCart(id){
@@ -125,15 +125,28 @@ const product = products.find(p => p.id === id);
 
 cart.push(product);
 
+if(typeof gtag !== "undefined"){
+gtag('event','add_to_cart',{
+product_name: product.name,
+price: product.price
+});
+}
+
 alert(product.name + " added to cart");
 
 }
 
 /* =========================
-   PRODUCT PAGE
+PRODUCT PAGE
 ========================= */
 
 function openProduct(id){
+
+if(typeof gtag !== "undefined"){
+gtag('event','product_click',{
+product_id: id
+});
+}
 
 localStorage.setItem("selectedProduct", id);
 
@@ -160,7 +173,7 @@ document.getElementById("productSize").innerText = "Size "+product.size;
 }
 
 /* =========================
-   WHATSAPP
+WHATSAPP
 ========================= */
 
 function openWhatsApp(){
@@ -173,6 +186,12 @@ function confirmRental(){
 
 const product = document.getElementById("productName").innerText;
 
+if(typeof gtag !== "undefined"){
+gtag('event','whatsapp_order',{
+product_name: product
+});
+}
+
 const start = document.getElementById("startDate").value;
 const end = document.getElementById("endDate").value;
 
@@ -183,7 +202,7 @@ window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}
 }
 
 /* =========================
-   FILTERS
+FILTERS
 ========================= */
 
 function applyFilters(){
@@ -211,7 +230,7 @@ displayProducts(filtered);
 }
 
 /* =========================
-   INITIAL LOAD
+INITIAL LOAD
 ========================= */
 
 document.addEventListener("DOMContentLoaded", function(){
