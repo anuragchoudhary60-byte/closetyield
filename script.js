@@ -12,16 +12,16 @@ let cart = [];
 
 const products = [
 
-{ id:"1", name:"Black Knit Running Shoes", price:120, deposit:200, category:"Footwear", size:"9", image:"./Images/black-knit-running-shoes.jpg" },
-{ id:"2", name:"Philips Turbo Dry Hair Dryer", price:50, deposit:100, category:"Accessories", size:"Standard", image:"./Images/philips-turbo-dry-hair-dryer.jpg" },
-{ id:"3", name:"Beige Chunky Sneakers", price:150, deposit:250, category:"Footwear", size:"6", image:"./Images/beige-chunky-sneakers.jpg" },
-{ id:"4", name:"Philips Dry Iron", price:40, deposit:80, category:"Accessories", size:"Standard", image:"./Images/philips-dry-iron.jpg" },
-{ id:"5", name:"Navy Blue Gradient Running Shoes", price:130, deposit:220, category:"Footwear", size:"10", image:"./Images/navy-blue-gradient-running-shoes.jpg" },
+{ id:"1", name:"Black Knit Running Shoes", price:1200, deposit:2000, category:"Footwear", size:"9", image:"./Images/black-knit-running-shoes.jpg" },
+{ id:"2", name:"Philips Turbo Dry Hair Dryer", price:500, deposit:1000, category:"Accessories", size:"Standard", image:"./Images/philips-turbo-dry-hair-dryer.jpg" },
+{ id:"3", name:"Beige Chunky Sneakers", price:1500, deposit:2500, category:"Footwear", size:"6", image:"./Images/beige-chunky-sneakers.jpg" },
+{ id:"4", name:"Philips Dry Iron", price:400, deposit:800, category:"Accessories", size:"Standard", image:"./Images/philips-dry-iron.jpg" },
+{ id:"5", name:"Navy Blue Gradient Running Shoes", price:1300, deposit:2200, category:"Footwear", size:"10", image:"./Images/navy-blue-gradient-running-shoes.jpg" },
 
-{ id:"6", name:"Tropical Floral Half Sleeve Shirt", price:90, deposit:150, category:"Clothing", size:"L", image:"./Images/tropical-floral-half-sleeve-shirt.jpg" },
-{ id:"7", name:"Navy Tropical Floral Shirt", price:95, deposit:160, category:"Clothing", size:"L", image:"./Images/navy-tropical-floral-shirt.jpg" },
-{ id:"8", name:"Abstract Leaf Print Half Sleeve Shirt", price:85, deposit:140, category:"Clothing", size:"M", image:"./Images/abstract-leaf-print-half-sleeve-shirt.jpg" },
-{ id:"9", name:"Black Curly Wig with Bowler Hat", price:40, deposit:70, category:"Accessories", size:"Standard", image:"./Images/black-curly-wig-bowler-hat.jpg" },
+{ id:"6", name:"Tropical Floral Half Sleeve Shirt", price:900, deposit:1500, category:"Clothing", size:"L", image:"./Images/tropical-floral-half-sleeve-shirt.jpg" },
+{ id:"7", name:"Navy Tropical Floral Shirt", price:950, deposit:1600, category:"Clothing", size:"L", image:"./Images/navy-tropical-floral-shirt.jpg" },
+{ id:"8", name:"Abstract Leaf Print Half Sleeve Shirt", price:850, deposit:1400, category:"Clothing", size:"M", image:"./Images/abstract-leaf-print-half-sleeve-shirt.jpg" },
+{ id:"9", name:"Black Curly Wig with Bowler Hat", price:400, deposit:700, category:"Accessories", size:"Standard", image:"./Images/black-curly-wig-bowler-hat.jpg" },
 
 { id:"10", name:"Silver Embroidered Sherwani", price:1200, deposit:1200, category:"Clothing", size:"L", image:"./Images/silver-embroidered-sherwani.jpeg" },
 { id:"11", name:"Black Beaded Statement Necklace", price:200, deposit:200, category:"Accessories", size:"Free Size", image:"./Images/black-beaded-statement-necklace.jpeg" },
@@ -34,7 +34,7 @@ const products = [
 { id:"18", name:"White Sequin Mini Dress", price:700, deposit:700, category:"Clothing", size:"S", image:"./Images/white-sequin-mini-dress.jpeg" },
 { id:"19", name:"Navy Blue Strapless Party Dress", price:400, deposit:400, category:"Clothing", size:"M", image:"./Images/navy-blue-strapless-party-dress.jpeg" },
 
-{ id:"20", name:"Polka Dot Puff Crop Top", price:500, deposit:500, category:"Clothing", size:"S", image:"./Images/Polka Dot Puff Crop top.jpg" },
+{ id:"20", name:"Polka Dot Puff Crop Top", price:500, deposit:500, category:"Clothing", size:"S", image:"./Images/Polka dot puff crop top.jpg" },
 { id:"21", name:"Monochrome Houndstooth Cut-Out Dress", price:1000, deposit:1000, category:"Clothing", size:"S", image:"./Images/Monochrome Houndstooth Cut-Out Dress.jpg" },
 { id:"22", name:"Mint Blossom Embroidered Cape Lehenga Set", price:2000, deposit:2000, category:"Clothing", size:"S", image:"./Images/Mint Blossom Embroidered Cape Lehenga Set.jpg" },
 { id:"23", name:"Sage Green Floral Dress", price:1000, deposit:1000, category:"Clothing", size:"M", image:"./Images/Sage-green-floral-dress.jpg" },
@@ -64,11 +64,11 @@ const products = [
 { id:"43", name:"New Balance RC42", price:899, deposit:899, category:"Footwear", size:"7", image:"./Images/New-Balance-RC42.jpg" },
 
 { id:"44", name:"Black Kenneth Cole Watch", price:1500, deposit:1500, category:"Accessories", size:"Free Size", image:"./Images/Black-Kenneth-Cole-Watch.jpeg" },
-{ id:"45", name:"Blue Lehenga", price:1500, deposit:1500, category:"Clothing", size:"M", image:"./Images/Blue-Lehenga.jpeg" },
+{ id:"45", name:"Blue Lehenga", price:1500, deposit:1500, category:"Clothing", size:"M", image:"./Images/Blue-Lehenga.png" },
 { id:"46", name:"Blue Peter England Blazer", price:750, deposit:750, category:"Clothing", size:"M", image:"./Images/Blue-Peter-England-Blazer.jpeg" },
-{ id:"47", name:"Purple Embroidered Kurta", price:500, deposit:500, category:"Clothing", size:"M", image:"./Images/Purple-Embroidered-Kurta.jpeg" },
-{ id:"48", name:"White and Red Lehenga", price:1100, deposit:1100, category:"Clothing", size:"M", image:"./Images/White-and-Red-Lehenga.jpeg" },
-{ id:"49", name:"Red Kurta", price:500, deposit:500, category:"Clothing", size:"S", image:"./Images/Red-Kurta.jpeg" },
+{ id:"47", name:"Purple Embroidered Kurta", price:500, deposit:500, category:"Clothing", size:"M", image:"./Images/Purple-Embroidered-Kurta.png" },
+{ id:"48", name:"White and Red Lehenga", price:1100, deposit:1100, category:"Clothing", size:"M", image:"./Images/White-and-Red-Lehenga.png" },
+{ id:"49", name:"Red Kurta", price:500, deposit:500, category:"Clothing", size:"S", image:"./Images/Red-Kurta.png" },
 { id:"50", name:"Gold and Green Lehenga", price:1100, deposit:1100, category:"Clothing", size:"M", image:"./Images/Gold-and-Green-Lehenga.jpeg" },
 { id:"51", name:"Green Party Dress", price:800, deposit:800, category:"Clothing", size:"S", image:"./Images/Green-Party-Dress.jpeg" },
 { id:"52", name:"Orange Embroidered Party Dress", price:800, deposit:800, category:"Clothing", size:"S", image:"./Images/Orange-Embroidered-Party-Dress.jpeg" }
@@ -116,6 +116,20 @@ Add to Cart
 }
 
 /* =========================
+ANALYTICS TRACKING
+========================= */
+
+function trackEvent(event,data={}){
+
+if(typeof gtag !== "undefined"){
+
+gtag('event',event,data);
+
+}
+
+}
+
+/* =========================
 ADD TO CART
 ========================= */
 
@@ -125,12 +139,11 @@ const product = products.find(p => p.id === id);
 
 cart.push(product);
 
-if(typeof gtag !== "undefined"){
-gtag('event','add_to_cart',{
+trackEvent("add_to_cart",{
 product_name: product.name,
+category: product.category,
 price: product.price
 });
-}
 
 alert(product.name + " added to cart");
 
@@ -142,11 +155,12 @@ PRODUCT PAGE
 
 function openProduct(id){
 
-if(typeof gtag !== "undefined"){
-gtag('event','product_click',{
-product_id: id
+const product = products.find(p => p.id === id);
+
+trackEvent("product_click",{
+product_name: product.name,
+category: product.category
 });
-}
 
 localStorage.setItem("selectedProduct", id);
 
@@ -162,8 +176,6 @@ if(!id) return;
 
 const product = products.find(p => p.id === id);
 
-if(!product) return;
-
 document.getElementById("productImage").src = product.image;
 document.getElementById("productName").innerText = product.name;
 document.getElementById("productPrice").innerText = "₹"+product.price+"/day";
@@ -173,24 +185,14 @@ document.getElementById("productSize").innerText = "Size "+product.size;
 }
 
 /* =========================
-WHATSAPP
+WHATSAPP ORDER
 ========================= */
-
-function openWhatsApp(){
-
-window.open(`https://wa.me/${whatsappNumber}`, "_blank");
-
-}
 
 function confirmRental(){
 
 const product = document.getElementById("productName").innerText;
 
-if(typeof gtag !== "undefined"){
-gtag('event','whatsapp_order',{
-product_name: product
-});
-}
+trackEvent("whatsapp_order",{product_name:product});
 
 const start = document.getElementById("startDate").value;
 const end = document.getElementById("endDate").value;
