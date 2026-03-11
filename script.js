@@ -12,16 +12,16 @@ let cart = [];
 
 const products = [
 
-{ id:"1", name:"Black Knit Running Shoes", price:1200, deposit:2000, category:"Footwear", size:"9", image:"./Images/black-knit-running-shoes.jpg" },
-{ id:"2", name:"Philips Turbo Dry Hair Dryer", price:500, deposit:1000, category:"Accessories", size:"Standard", image:"./Images/philips-turbo-dry-hair-dryer.jpg" },
-{ id:"3", name:"Beige Chunky Sneakers", price:1500, deposit:2500, category:"Footwear", size:"6", image:"./Images/beige-chunky-sneakers.jpg" },
-{ id:"4", name:"Philips Dry Iron", price:400, deposit:800, category:"Accessories", size:"Standard", image:"./Images/philips-dry-iron.jpg" },
-{ id:"5", name:"Navy Blue Gradient Running Shoes", price:1300, deposit:2200, category:"Footwear", size:"10", image:"./Images/navy-blue-gradient-running-shoes.jpg" },
+{ id:"1", name:"Black Knit Running Shoes", price:120, deposit:200, category:"Footwear", size:"9", image:"./Images/black-knit-running-shoes.jpg" },
+//{ id:"2", name:"Philips Turbo Dry Hair Dryer", price:500, deposit:1000, category:"Accessories", size:"Standard", image:"./Images/philips-turbo-dry-hair-dryer.jpg" },
+{ id:"3", name:"Beige Chunky Sneakers", price:150, deposit:250, category:"Footwear", size:"6", image:"./Images/beige-chunky-sneakers.jpg" },
+//{ id:"4", name:"Philips Dry Iron", price:400, deposit:800, category:"Accessories", size:"Standard", image:"./Images/philips-dry-iron.jpg" },
+{ id:"5", name:"Navy Blue Gradient Running Shoes", price:130, deposit:220, category:"Footwear", size:"10", image:"./Images/navy-blue-gradient-running-shoes.jpg" },
 
-{ id:"6", name:"Tropical Floral Half Sleeve Shirt", price:900, deposit:1500, category:"Clothing", size:"L", image:"./Images/tropical-floral-half-sleeve-shirt.jpg" },
-{ id:"7", name:"Navy Tropical Floral Shirt", price:950, deposit:1600, category:"Clothing", size:"L", image:"./Images/navy-tropical-floral-shirt.jpg" },
-{ id:"8", name:"Abstract Leaf Print Half Sleeve Shirt", price:850, deposit:1400, category:"Clothing", size:"M", image:"./Images/abstract-leaf-print-half-sleeve-shirt.jpg" },
-{ id:"9", name:"Black Curly Wig with Bowler Hat", price:400, deposit:700, category:"Accessories", size:"Standard", image:"./Images/black-curly-wig-bowler-hat.jpg" },
+{ id:"6", name:"Tropical Floral Half Sleeve Shirt", price:90, deposit:150, category:"Clothing", size:"L", image:"./Images/tropical-floral-half-sleeve-shirt.jpg" },
+{ id:"7", name:"Navy Tropical Floral Shirt", price:95, deposit:160, category:"Clothing", size:"L", image:"./Images/navy-tropical-floral-shirt.jpg" },
+{ id:"8", name:"Abstract Leaf Print Half Sleeve Shirt", price:85, deposit:140, category:"Clothing", size:"M", image:"./Images/abstract-leaf-print-half-sleeve-shirt.jpg" },
+{ id:"9", name:"Black Curly Wig with Bowler Hat", price:40, deposit:70, category:"Accessories", size:"Standard", image:"./Images/black-curly-wig-bowler-hat.jpg" },
 
 { id:"10", name:"Silver Embroidered Sherwani", price:1200, deposit:1200, category:"Clothing", size:"L", image:"./Images/silver-embroidered-sherwani.jpeg" },
 { id:"11", name:"Black Beaded Statement Necklace", price:200, deposit:200, category:"Accessories", size:"Free Size", image:"./Images/black-beaded-statement-necklace.jpeg" },
