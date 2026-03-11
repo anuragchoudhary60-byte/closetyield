@@ -34,7 +34,7 @@ const products = [
 { id:"18", name:"White Sequin Mini Dress", price:700, deposit:700, category:"Clothing", size:"S", image:"./Images/white-sequin-mini-dress.jpeg" },
 { id:"19", name:"Navy Blue Strapless Party Dress", price:400, deposit:400, category:"Clothing", size:"M", image:"./Images/navy-blue-strapless-party-dress.jpeg" },
 
-{ id:"20", name:"Polka Dot Puff Crop Top", price:500, deposit:500, category:"Clothing", size:"S", image:"./Images/Polka dot puff crop top.jpg" },
+{ id:"20", name:"Polka Dot Puff Crop Top", price:500, deposit:500, category:"Clothing", size:"S", image:"./Images/Polka Dot Puff Crop top.jpg" },
 { id:"21", name:"Monochrome Houndstooth Cut-Out Dress", price:1000, deposit:1000, category:"Clothing", size:"S", image:"./Images/Monochrome Houndstooth Cut-Out Dress.jpg" },
 { id:"22", name:"Mint Blossom Embroidered Cape Lehenga Set", price:2000, deposit:2000, category:"Clothing", size:"S", image:"./Images/Mint Blossom Embroidered Cape Lehenga Set.jpg" },
 { id:"23", name:"Sage Green Floral Dress", price:1000, deposit:1000, category:"Clothing", size:"M", image:"./Images/Sage-green-floral-dress.jpg" },
@@ -64,11 +64,11 @@ const products = [
 { id:"43", name:"New Balance RC42", price:899, deposit:899, category:"Footwear", size:"7", image:"./Images/New-Balance-RC42.jpg" },
 
 { id:"44", name:"Black Kenneth Cole Watch", price:1500, deposit:1500, category:"Accessories", size:"Free Size", image:"./Images/Black-Kenneth-Cole-Watch.jpeg" },
-{ id:"45", name:"Blue Lehenga", price:1500, deposit:1500, category:"Clothing", size:"M", image:"./Images/Blue-Lehenga.png" },
+{ id:"45", name:"Blue Lehenga", price:1500, deposit:1500, category:"Clothing", size:"M", image:"./Images/Blue-Lehenga.jpeg" },
 { id:"46", name:"Blue Peter England Blazer", price:750, deposit:750, category:"Clothing", size:"M", image:"./Images/Blue-Peter-England-Blazer.jpeg" },
-{ id:"47", name:"Purple Embroidered Kurta", price:500, deposit:500, category:"Clothing", size:"M", image:"./Images/Purple-Embroidered-Kurta.png" },
-{ id:"48", name:"White and Red Lehenga", price:1100, deposit:1100, category:"Clothing", size:"M", image:"./Images/White-and-Red-Lehenga.png" },
-{ id:"49", name:"Red Kurta", price:500, deposit:500, category:"Clothing", size:"S", image:"./Images/Red-Kurta.png" },
+{ id:"47", name:"Purple Embroidered Kurta", price:500, deposit:500, category:"Clothing", size:"M", image:"./Images/Purple-Embroidered-Kurta.jpeg" },
+{ id:"48", name:"White and Red Lehenga", price:1100, deposit:1100, category:"Clothing", size:"M", image:"./Images/White-and-Red-Lehenga.jpeg" },
+{ id:"49", name:"Red Kurta", price:500, deposit:500, category:"Clothing", size:"S", image:"./Images/Red-Kurta.jpeg" },
 { id:"50", name:"Gold and Green Lehenga", price:1100, deposit:1100, category:"Clothing", size:"M", image:"./Images/Gold-and-Green-Lehenga.jpeg" },
 { id:"51", name:"Green Party Dress", price:800, deposit:800, category:"Clothing", size:"S", image:"./Images/Green-Party-Dress.jpeg" },
 { id:"52", name:"Orange Embroidered Party Dress", price:800, deposit:800, category:"Clothing", size:"S", image:"./Images/Orange-Embroidered-Party-Dress.jpeg" }
