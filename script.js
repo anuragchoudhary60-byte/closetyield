@@ -38,12 +38,15 @@ const products = [
 { id:"21", name:"Monochrome Houndstooth Cut-Out Dress", price:1000, deposit:1000, category:"Clothing", size:"S", image:"./Images/Monochrome Houndstooth Cut-Out Dress.jpg" },
 { id:"22", name:"Mint Blossom Embroidered Cape Lehenga Set", price:2000, deposit:2000, category:"Clothing", size:"S", image:"./Images/Mint Blossom Embroidered Cape Lehenga Set.jpg" },
 { id:"23", name:"Sage Green Floral Dress", price:1000, deposit:1000, category:"Clothing", size:"M", image:"./Images/Sage-green-floral-dress.jpg" },
-{ id:"24", name:"Navy Blue & Golden Lehenga", price:3000, deposit:3000, category:"Clothing", size:"L", image:"./Images/Navy-Blue-&-Golden-Lehenga.jpg" },
+
+{ id:"24", name:"Navy Blue & Golden Lehenga", price:3000, deposit:3000, category:"Clothing", size:"L", image:"./Images/Navy-Blue-&-Golden-Lehenga.jpg", popular:true },
 
 { id:"25", name:"Denim Mini Dress", price:1000, deposit:1000, category:"Clothing", size:"S", image:"./Images/Denim-Mini-Dress.jpg" },
 { id:"26", name:"Off-white and Gold Anarkali Dress", price:1000, deposit:1000, category:"Clothing", size:"S", image:"./Images/Off-white-and-gold-Anarkali-Dress.jpg" },
 { id:"27", name:"Red Embroidered Lehenga", price:3000, deposit:3000, category:"Clothing", size:"S", image:"./Images/Red-embroidered-Lehenga.jpg" },
-{ id:"28", name:"Elegant Beige Embroidered Lehenga", price:4000, deposit:4000, category:"Clothing", size:"S", image:"./Images/Elegant-beige-embroidered-lehenga.jpg" },
+
+{ id:"28", name:"Elegant Beige Embroidered Lehenga", price:4000, deposit:4000, category:"Clothing", size:"S", image:"./Images/Elegant-beige-embroidered-lehenga.jpg", popular:true },
+
 { id:"29", name:"Navy Blue & Gold Anarkali Dress", price:2000, deposit:2000, category:"Clothing", size:"S", image:"./Images/Navy-Blue-&-Gold-Anarkali-Dress.jpg" },
 
 { id:"30", name:"Off-white Embroidered Long Skirt", price:1000, deposit:1000, category:"Clothing", size:"S", image:"./Images/Off-white-embroidered-long-skirt.jpg" },
@@ -64,13 +67,19 @@ const products = [
 { id:"43", name:"New Balance RC42", price:899, deposit:899, category:"Footwear", size:"7", image:"./Images/New-Balance-RC42.jpg" },
 
 { id:"44", name:"Black Kenneth Cole Watch", price:1500, deposit:1500, category:"Accessories", size:"Free Size", image:"./Images/Black-Kenneth-Cole-Watch.jpeg" },
-{ id:"45", name:"Blue Lehenga", price:1500, deposit:1500, category:"Clothing", size:"M", image:"./Images/Blue-Lehenga.jpeg" },
+
+{ id:"45", name:"Blue Lehenga", price:1500, deposit:1500, category:"Clothing", size:"M", image:"./Images/Blue-Lehenga.jpeg", soldout:true },
+
 { id:"46", name:"Blue Peter England Blazer", price:750, deposit:750, category:"Clothing", size:"M", image:"./Images/Blue-Peter-England-Blazer.jpeg" },
-{ id:"47", name:"Purple Embroidered Kurta", price:500, deposit:500, category:"Clothing", size:"M", image:"./Images/Purple-Embroidered-Kurta.jpeg" },
+
+{ id:"47", name:"Purple Embroidered Kurta", price:500, deposit:500, category:"Clothing", size:"M", image:"./Images/Purple-Embroidered-Kurta.jpeg", soldout:true },
+
 { id:"48", name:"White and Red Lehenga", price:1100, deposit:1100, category:"Clothing", size:"M", image:"./Images/White-and-Red-Lehenga.jpeg" },
 { id:"49", name:"Red Kurta", price:500, deposit:500, category:"Clothing", size:"S", image:"./Images/Red-Kurta.jpeg" },
 { id:"50", name:"Gold and Green Lehenga", price:1100, deposit:1100, category:"Clothing", size:"M", image:"./Images/Gold-and-Green-Lehenga.jpeg" },
-{ id:"51", name:"Green Party Dress", price:800, deposit:800, category:"Clothing", size:"S", image:"./Images/Green-Party-Dress.jpeg" },
+
+{ id:"51", name:"Green Party Dress", price:800, deposit:800, category:"Clothing", size:"S", image:"./Images/Green-Party-Dress.jpeg", popular:true },
+
 { id:"52", name:"Orange Embroidered Party Dress", price:800, deposit:800, category:"Clothing", size:"S", image:"./Images/Orange-Embroidered-Party-Dress.jpeg" }
 
 ];
@@ -93,6 +102,10 @@ grid.innerHTML += `
 
 <div class="product-card" onclick="openProduct('${product.id}')">
 
+${product.popular ? '<div class="badge popular">Most Popular</div>' : ''}
+
+${product.soldout ? '<div class="badge soldout">Sold Out</div>' : ''}
+
 <img src="${product.image}">
 
 <h4>${product.name}</h4>
@@ -103,29 +116,19 @@ grid.innerHTML += `
 
 <p>Size ${product.size}</p>
 
-<button onclick="event.stopPropagation(); addToCart('${product.id}')">
-Add to Cart
-</button>
+${
+product.soldout
+?
+'<button class="sold-btn" disabled>Sold Out</button>'
+:
+`<button onclick="event.stopPropagation(); addToCart('${product.id}')">Add to Cart</button>`
+}
 
 </div>
 
 `;
 
 });
-
-}
-
-/* =========================
-ANALYTICS TRACKING
-========================= */
-
-function trackEvent(event,data={}){
-
-if(typeof gtag !== "undefined"){
-
-gtag('event',event,data);
-
-}
 
 }
 
@@ -139,12 +142,6 @@ const product = products.find(p => p.id === id);
 
 cart.push(product);
 
-trackEvent("add_to_cart",{
-product_name: product.name,
-category: product.category,
-price: product.price
-});
-
 alert(product.name + " added to cart");
 
 }
@@ -154,13 +151,6 @@ PRODUCT PAGE
 ========================= */
 
 function openProduct(id){
-
-const product = products.find(p => p.id === id);
-
-trackEvent("product_click",{
-product_name: product.name,
-category: product.category
-});
 
 localStorage.setItem("selectedProduct", id);
 
@@ -191,8 +181,6 @@ WHATSAPP ORDER
 function confirmRental(){
 
 const product = document.getElementById("productName").innerText;
-
-trackEvent("whatsapp_order",{product_name:product});
 
 const start = document.getElementById("startDate").value;
 const end = document.getElementById("endDate").value;
